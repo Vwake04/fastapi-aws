@@ -48,7 +48,7 @@ jobs:
     
      - name: Terraform init
        id: init
-       run: terraform init -backend-config="bucket=$BUCKET_TF_STATE" -backend-config="region=$AWS_REGION" -backend-config="dynamodb_table=$DYNAMODB_TF_TABLE" -backend-config="kms_key_id=$KMS_KEY_TF_ID" -backend-config="key=$KEY_TF_NAME"
+       run: terraform init -backend-config="bucket=$BUCKET_TF_STATE" -backend-config="region=$AWS_DEFAULT_REGION" -backend-config="dynamodb_table=$DYNAMODB_TF_TABLE" -backend-config="kms_key_id=$KMS_KEY_TF_ID" -backend-config="key=$KEY_TF_NAME"
 
  
      - name: Terraform format
